@@ -16,7 +16,7 @@ public class LoggedInActivity extends AppCompatActivity {
 
         String username = getIntent().getStringExtra("EXTRA_USERNAME");
         setTitle("Welcome, " + username);
-        
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
