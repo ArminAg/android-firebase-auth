@@ -13,6 +13,10 @@ public class LoggedInActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logged_in);
+
+        String username = getIntent().getStringExtra("EXTRA_USERNAME");
+        setTitle("Welcome, " + username);
+        
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 

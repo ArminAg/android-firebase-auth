@@ -379,6 +379,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                             FirebaseDatabase.getInstance().getReference("users").child(userId).child("profile").setValue(user);
 
                             Intent intent = new Intent(getActivity().getBaseContext(), LoggedInActivity.class);
+                            intent.putExtra("EXTRA_USERNAME", username);
                             startActivity(intent);
                         }
                     });
